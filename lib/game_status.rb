@@ -22,5 +22,5 @@ def won?(board)
       board[i] != " " || board[i] != "" || board[i] != nil }
      end
      return false
-  [1,2,100].any?{|i| i > 99}
+  
 end
