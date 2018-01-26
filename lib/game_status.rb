@@ -15,10 +15,18 @@ WIN_COMBINATIONS = [
   [2,4,6],  # Middle row vertical
 ]
 
-def won?(board)
-  x_indexes = board.each_index.select{ |i| board[i] == "X"}
-  o_indexes = board.each_index.select{ |i| board[i] == "O"}
-  if board.any?{ |i| board[i] != " " || board[i] != "" || board[i] != nil }
-     return false
+# def won?(board)
+#   x_indexes = board.each_index.select{ |i| board[i] == "X"}
+#   o_indexes = board.each_index.select{ |i| board[i] == "O"}
+#   if board.any?{ |i| board[i] != " " || board[i] != "" || board[i] != nil }
+#      return false
+#   end
+# end
+
+def full?(board) 
+  if board.all{ |i| board[i] == "X" || board[i] == "O"}
+    return true
+  else 
+    return false
   end
 end
