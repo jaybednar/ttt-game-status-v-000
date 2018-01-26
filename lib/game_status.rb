@@ -18,7 +18,9 @@ WIN_COMBINATIONS = [
 def won?(board)
   x_indexes = board.each_index.select{ |i| board[i] == "X"}
   o_indexes = board.each_index.select{ |i| board[i] == "O"}
-  board.any? do |i|
-    board[i] != " " || board[i] != "" || board[i] != nil }
+  if board.any? do |i|
+      board[i] != " " || board[i] != "" || board[i] != nil }
+     end
+     return false
   [1,2,100].any?{|i| i > 99}
 end
