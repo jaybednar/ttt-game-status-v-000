@@ -23,10 +23,10 @@ WIN_COMBINATIONS = [
 #   end
 # end
 
-def full?(board) 
+def full?(board)
   if board.all{ |i| board[i] == "X" || board[i] == "O"}
     return true
-  else 
+  else
     return false
   end
 end
