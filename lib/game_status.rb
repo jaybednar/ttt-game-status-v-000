@@ -51,7 +51,7 @@ end
 def winner(board)
   binding.pry
   if won?(board)
-    return winning_indexes[0]
+    return "win"
   else
     return nil
   end
