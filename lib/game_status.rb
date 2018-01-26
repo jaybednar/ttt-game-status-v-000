@@ -1,4 +1,4 @@
-require "pry"
+#require "pry"
 
 # Helper Method
 def position_taken?(board, index)
@@ -49,7 +49,7 @@ def over?(board)
 end
 
 def winner(board)
-  binding.pry
+  #binding.pry
   if won?(board)
     won?(board).each do |i|
       if board[i] == "X"
