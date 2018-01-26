@@ -18,10 +18,12 @@ WIN_COMBINATIONS = [
 def won?(board)
   x_indexes = board.each_index.select{ |i| board[i] == "X"}
   o_indexes = board.each_index.select{ |i| board[i] == "O"}
-  x_win_present = WIN_COMBINATIONS.any?{ |i| WIN_COMBINATIONS[i] == x_indexes}
-  o_win_present = WIN_COMBINATIONS.any?{ |i| WIN_COMBINATIONS[i] == o_indexes}
-  if x
-     return false
+  x_win_present = WIN_COMBINATIONS.any?{ |i| i == x_indexes}
+  o_win_present = WIN_COMBINATIONS.any?{ |i| i == o_indexes}
+  if x_win_present || o_win_present
+     return true
+  else 
+    return false
   end
 end
 
