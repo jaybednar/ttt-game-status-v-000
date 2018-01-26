@@ -20,8 +20,10 @@ def won?(board)
   o_indexes = board.each_index.select{ |i| board[i] == "O"}
   x_win_present = WIN_COMBINATIONS.any?{ |i| i == x_indexes}
   o_win_present = WIN_COMBINATIONS.any?{ |i| i == o_indexes}
-  if x_win_present 
-     return true
+  if x_win_present
+     return x_indexes
+  elsif o_win_present
+     return o_indexes 
   else
     return false
   end
