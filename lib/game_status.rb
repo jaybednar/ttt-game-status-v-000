@@ -29,7 +29,7 @@ def won?(board)
   end
   # x_win_present = WIN_COMBINATIONS.any?{ |i| x_indexes.include?(i)}
   # o_win_present = WIN_COMBINATIONS.any?{ |i| o_indexes.include?(i)}
-  binding.pry
+  # binding.pry
   # if x_win_present
   #    return x_indexes
   # elsif o_win_present
@@ -48,7 +48,7 @@ def full?(board)
 end
 
 def draw?(board)
-  binding.pry
+  # binding.pry
   if full?(board) && !won?(board)
     return true
   else
