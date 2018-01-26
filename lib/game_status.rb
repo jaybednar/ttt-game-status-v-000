@@ -24,11 +24,5 @@ WIN_COMBINATIONS = [
 # end
 
 def full?(board)
-  board.each do |index|
-    index = 0
-    if position_taken?(board, index) == false
-      return false
-    else
-      i += 1
-    end
+  if board.any?{ |index| board[index] == " " || board[index] == "" || board[index] == nil}
 end
