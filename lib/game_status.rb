@@ -18,25 +18,9 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  # x_indexes = board.each_index.select{ |i| board[i] == "X"}
-  # o_indexes = board.each_index.select{ |i| board[i] == "O"}
-  # x_arr = []
-  # o_arr = []
-  #
   WIN_COMBINATIONS.detect do |arr|
     board[arr[0]] == board[arr[1]] && board[arr[1]] == board[arr[2]] && position_taken?(board, arr[0])
-
   end
-  # x_win_present = WIN_COMBINATIONS.any?{ |i| x_indexes.include?(i)}
-  # o_win_present = WIN_COMBINATIONS.any?{ |i| o_indexes.include?(i)}
-  # binding.pry
-  # if x_win_present
-  #    return x_indexes
-  # elsif o_win_present
-  #    return o_indexes
-  # else
-  #   return false
-  # end
 end
 
 def full?(board)
