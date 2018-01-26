@@ -50,6 +50,7 @@ end
 
 def winner(board)
   binding.pry
+  winning_indexes = won?(board)
   if won?(board)
     return won?(board)[0]
   else
