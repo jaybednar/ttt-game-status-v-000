@@ -48,10 +48,10 @@ def over?(board)
   end
 end
 
-def winner
+def winner(board)
   if won?(board, index)
     return board[index]
   else
     return nil
-  end 
+  end
 end
