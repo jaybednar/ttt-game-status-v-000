@@ -28,6 +28,6 @@ def full?(board)
     i = 0
     if position_taken?(board, index) == false
       return false
-    else 
+    else
       i += 1
 end
