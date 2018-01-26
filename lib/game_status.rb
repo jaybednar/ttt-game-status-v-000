@@ -1,4 +1,4 @@
-require pry
+require "pry"
 
 # Helper Method
 def position_taken?(board, index)
@@ -22,6 +22,7 @@ def won?(board)
   o_indexes = board.each_index.select{ |i| board[i] == "O"}
   x_win_present = WIN_COMBINATIONS.any?{ |i| i == x_indexes}
   o_win_present = WIN_COMBINATIONS.any?{ |i| i == o_indexes}
+  binding.pry
   if x_win_present
      return x_indexes
   elsif o_win_present
@@ -40,7 +41,7 @@ def full?(board)
 end
 
 def draw?(board)
-  binding.pry
+  #binding.pry
   if full?(board) && !won?(board)
     return true
   else
@@ -48,13 +49,13 @@ def draw?(board)
   end
 end
 
-def over?(board)
-  if won?(board) != false || full?(board) || draw?(board)
-    return true
-  else
-    return false
-end
-
-def winner
-
-end
+# def over?(board)
+#   if won?(board) != false || full?(board) || draw?(board)
+#     return true
+#   else
+#     return false
+# end
+# 
+# def winner
+# 
+# end
