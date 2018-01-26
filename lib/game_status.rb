@@ -23,16 +23,16 @@ def won?(board)
   if x_win_present
      return x_indexes
   elsif o_win_present
-     return o_indexes 
+     return o_indexes
   else
     return false
   end
 end
 
-# def full?(board)
-#   if board.any?{ |index| board[index] == " " }
-#     return false
-#   else
-#     return true
-#   end
-# end
+def full?(board)
+  if board.any?{ |i| i == " " }
+    return false
+  else
+    return true
+  end
+end
