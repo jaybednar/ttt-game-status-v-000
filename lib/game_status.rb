@@ -24,7 +24,7 @@ def won?(board)
   # o_arr = []
   #
   WIN_COMBINATIONS.detect do |arr|
-    board[arr[0]] == board[arr[1]] && board[arr[1]] == board[arr[2]]
+    board[arr[0]] == board[arr[1]] && board[arr[1]] == board[arr[2]] && position_taken?(board, index)
   # x_win_present = WIN_COMBINATIONS.any?{ |i| x_indexes.include?(i)}
   # o_win_present = WIN_COMBINATIONS.any?{ |i| o_indexes.include?(i)}
   binding.pry
