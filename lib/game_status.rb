@@ -24,5 +24,9 @@ WIN_COMBINATIONS = [
 # end
 
 def full?(board)
-  if board.any?{ |index| board[index] == " " || board[index] == "" || board[index] == nil}
+  if board.any?{ |index| board[index] == " " }
+    return false
+  else
+    return true
+  end 
 end
