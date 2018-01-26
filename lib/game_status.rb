@@ -49,5 +49,9 @@ def over?(board)
 end
 
 def winner
-  
+  if won?(board, index)
+    return board[index]
+  else
+    return nil
+  end 
 end
