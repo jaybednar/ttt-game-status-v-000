@@ -22,5 +22,5 @@ def won?(board)
       board[i] != " " || board[i] != "" || board[i] != nil }
      end
      return false
-  
+  end 
 end
