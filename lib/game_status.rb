@@ -18,9 +18,7 @@ WIN_COMBINATIONS = [
 def won?(board)
   x_indexes = board.each_index.select{ |i| board[i] == "X"}
   o_indexes = board.each_index.select{ |i| board[i] == "O"}
-  if board.any? do |i|
-      board[i] != " " || board[i] != "" || board[i] != nil }
-     end
+  if board.any?{ |i| board[i] != " " || board[i] != "" || board[i] != nil }
      return false
-  end 
+  end
 end
