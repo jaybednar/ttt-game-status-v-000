@@ -21,7 +21,7 @@ def won?(board)
   x_indexes = board.each_index.select{ |i| board[i] == "X"}
   o_indexes = board.each_index.select{ |i| board[i] == "O"}
   x_win_present = WIN_COMBINATIONS.any?{ |i| x_indexes.include?(i)}
-  o_win_present = WIN_COMBINATIONS.any?{ |i| i == o_indexes}
+  o_win_present = WIN_COMBINATIONS.any?{ |i| o_indexes.include?(i)}
   binding.pry
   if x_win_present
      return x_indexes
