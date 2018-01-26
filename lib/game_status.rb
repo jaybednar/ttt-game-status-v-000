@@ -1,4 +1,4 @@
-require pry 
+require pry
 
 # Helper Method
 def position_taken?(board, index)
@@ -40,6 +40,7 @@ def full?(board)
 end
 
 def draw?(board)
+  binding.pry 
   if full?(board) == true && won?(board) == false
     return true
   else
